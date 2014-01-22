@@ -56,7 +56,7 @@
 			},
 			applyHandlers = function ($menu, o) {
 				var targets = 'li:has(' + o.popUpSelector + ')';
-				if ($.fn.hoverIntent && !o.disableHI) {
+				if (!ios && $.fn.hoverIntent && !o.disableHI) {
 					$menu.hoverIntent(over, out, targets);
 				}
 				else {
